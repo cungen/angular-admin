@@ -30,5 +30,5 @@ node_modules
 .lock-wscript
 
 # Bower storage
-bower_components
+# bower_components
 .idea
