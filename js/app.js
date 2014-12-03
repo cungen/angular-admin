@@ -11,12 +11,12 @@
 
                 .state('index', {
                     url: '/index',
-                    templateUrl: '/views/dash/dash.html'
+                    templateUrl: 'views/dash/dash.html'
                 })
 
                 .state('link', {
                     url: '/link',
-                    templateUrl: '/views/link/link.html',
+                    templateUrl: 'views/link/link.html',
                     controller: 'LinkController'
                 });
         });
