@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------------
+ * [ Shop styles ]
+ * Project:	shop
+ * Version:	0.1
+ * Last change:	2014-11-27 22:49:09
+ * Assigned to:	Cungen(cg)
+ * ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------
+ * [ Table of contents ]
+ * 1. variables
+ * 2. mixin
+ * 3. theme
+ * ------------------------------------------------------------------ */
+/*------------------------------------------------------------------
+ * [ variables ] */
+/*------------------------------------------------------------------
+ * [ theme ] */
+html {
+  height: 100%; }
+
+body {
+  padding-top: 50px;
+  height: 100%; }
+
+.navbar-nav li:last-child {
+  margin-right: 15px; }
+
+.sub-container {
+  position: fixed;
+  width: 250px; }
+  .sub-container li {
+    position: relative; }
+    .sub-container li.active a {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0; }
+    .sub-container li.active:after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: -4px;
+      top: 50%;
+      margin-top: -4px;
+      background-color: #f8f8f8;
+      width: 8px;
+      height: 8px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+.main-container {
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #9E9E9E;
+  width: 100%; }
+  .main-container .main-wrapper {
+    height: 100%;
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-left: 1px solid #e7e7e7;
+    overflow: auto; }
+
+.breadcrumb {
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7; }
+
+.tab-content {
+  padding: 15px;
+  background-color: #ffffff; }
+
+.form-inline .form-group {
+  padding-right: 5px; }
+
+.table.table-col-4 td {
+  width: 25%; }
+.table tr.thead th {
+  text-align: center; }
+.table td.td-opt {
+  width: auto;
+  text-align: center; }
+  .table td.td-opt i {
+    padding: 0 20px; }
+.table td.pager {
+  text-align: center; }
+  .table td.pager .page-num input {
+    text-align: center;
+    width: 3em;
+    padding-left: 4px;
+    padding-right: 4px; }
+
+.margin-btm {
+  margin-bottom: 20px; }
+
+.copyright {
+  text-align: center;
+  color: #9E9E9E;
+  font-size: 0.8em; }
+
+/*# sourceMappingURL=all.css.map */

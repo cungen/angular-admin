@@ -1,0 +1,7 @@
+.data-hint(ng-controller='ActionHintController')
+    .paper(ng-class='{visible: ActionHintService.countOfAction > 0}', ng-show='ActionHintService.countOfAction > 0')
+        span 数据加载中……
+        a(href='javascript:;', title='关闭', ng-click='closeHint()') &times;
+    .paper.err(ng-class='{visible: ActionHintService.countOfError > 0}', ng-show='ActionHintService.countOfAction > 0')
+        span 数据加载失败
+        a(href='javascript:;', title='关闭', ng-click='closeError()') &times;

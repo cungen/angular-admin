@@ -1,0 +1,45 @@
+mixin ie(condition)
+    | <!--[!{condition}]>
+    block
+    | <![endif]-->
+doctype html
+// [if lt IE 7]>      <html class='no-js lt-ie9 lt-ie8 lt-ie7'> <![endif]
+// [if IE 7]>         <html class='no-js lt-ie9 lt-ie8'> <![endif]
+// [if IE 8]>         <html class='no-js lt-ie9'> <![endif]
+// [if gt IE 8]><!
+html.no-js(xmlns:ng='http://angularjs.org')
+    //<![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        block title
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width')
+        // Place favicon.ico and apple-touch-icon.png in the root directory
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/css/all.css')
+        block style
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        +ie('if IE')
+            script(src='/bower_components/html5shiv/dist/html5shiv.min.js')
+            script(src='/bower_components/respond/dest/respond.min.js')
+            script(src='/bower_components/es5-shim/es5-shim.js')
+            script(src='/bower_components/json3/lib/json3.min.js')
+    body
+        include header
+        include sub
+        .main-container
+            block content
+        script(src='/bower_components/angular/angular.min.js')
+        script(src='/bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='/js/config.js')
+        script(src='/js/modules-init.js')
+
+        // controllers
+        script(src='/js/controllers/NavController.js')
+        script(src='/views/goods/GoodsListController.js')
+
+        script(src='/js/app.js')
+
